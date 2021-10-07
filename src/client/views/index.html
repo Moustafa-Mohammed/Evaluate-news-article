@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evaluate a News Article</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="form-section">
+        <form class="form" onsubmit="return Client.handleSubmit(event)">
+          <label for="inputVal">Analyze your URL</label>
+          <input
+            id="inputVal"
+            type="text"
+            value=""
+            placeholder="Insert a URL to analyze"
+            onchange="return Client.stateHandle()"
+          />
+          <button
+            id="submitBtn"
+            type="submit"
+            value="Analyze text"
+            onclick="return Client.handleSubmit(event)"
+          >
+            Start analysis
+          </button>
+        </form>
+      </section>
+
+      <section class="result-section">
+        <h2 id="error"></h2>
+
+        <table class="result">
+          <thead>
+            <tr>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Confidence</td>
+              <td id="confidence"></td>
+            </tr>
+            <tr>
+              <td>Score Tag</td>
+              <td id="scoreTag"></td>
+            </tr>
+            <tr>
+              <td>Subjectivity</td>
+              <td id="subjectivity"></td>
+            </tr>
+            <tr>
+              <td>Irony</td>
+              <td id="irony"></td>
+            </tr>
+            <tr>
+              <td>Text</td>
+              <td id="text"></td>
+            </tr>
+            <tr>
+              <td>Agreement</td>
+              <td id="agreement"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

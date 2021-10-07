@@ -1,0 +1,30 @@
+$primary: #008cba;
+$success: #4caf50;
+
+td,
+th {
+  border: 1px solid #ddd;
+  color: #fff;
+}
+
+td {
+  padding: 8px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: white;
+}
+
+td:nth-child(2) {
+  background-color: $success;
+}
+td:nth-child(1) {
+  background-color: $primary;
+}
+
+.result {
+  opacity: 0;
+}

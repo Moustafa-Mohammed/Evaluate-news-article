@@ -1,0 +1,19 @@
+$error: red;
+html {
+  font-size: 18px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  max-width: 600px;
+  margin: 100px auto;
+}
+
+#error {
+  color: $error;
+}
