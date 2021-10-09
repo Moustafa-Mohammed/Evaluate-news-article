@@ -31,7 +31,7 @@ export const updateResults = (
     btn.innerHTML = "Analysis succeded";
     btn.style.background = "#4caf50";
   } else {
-    error.innerHTML = `Error in analyzing this URL. Server responded with code: ${responseObject.status.code}. Error Message: ${responseObject.status.msg}"`;
+    error.innerHTML = `Error in analyzing this URL. Server responded with code: ${responseObject.status.code}. Error Message: ${responseObject.status.msg}`;
     header.style.backgroundColor = "red";
     btn.innerHTML = "Analysis failed";
     btn.style.background = "red";
